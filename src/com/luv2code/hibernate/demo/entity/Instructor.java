@@ -47,7 +47,7 @@ public class Instructor {
 	// 1. Look at the instructor property in the Course class
 	// 2. Use info from the Course class @JoinColumn
 	// 3. This will help find associated courses for instructor
-	@OneToMany(fetch=FetchType.EAGER, 
+	@OneToMany(fetch=FetchType.LAZY, 
 			   mappedBy="instructor",
 			   cascade={CascadeType.PERSIST, CascadeType.MERGE,
 					CascadeType.DETACH, CascadeType.REFRESH})
